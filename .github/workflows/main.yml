@@ -56,6 +56,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          sudo docker pull alinavsk/infra_act
+          sudo docker pull alinavsk/infra_act:v1
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 alinavsk/infra_act
+          sudo docker run --rm -d -p 5000:5000 alinavsk/infra_act:v1
